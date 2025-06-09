@@ -21,3 +21,12 @@ function imprimirVariable()
     console.error("Error: bla bla bla");
     console.warn("Advertencia: x x x");
 }
+
+function arreglos()
+{
+    let frutas = ['manzana', 'pera', 'banana'];
+    for(let f of frutas)
+    {
+       console.log(f)
+    }
+}
