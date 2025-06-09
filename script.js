@@ -25,8 +25,20 @@ function imprimirVariable()
 function arreglos()
 {
     let frutas = ['manzana', 'pera', 'banana'];
+    
+    //Bucle
     for(let f of frutas)
     {
        console.log(f)
+    }
+
+    //Condicionales
+    if ((frutas[1]) === 'pera')
+    {
+        console.log("La segunda fruta es una pera");
+    }
+    else
+    {
+        console.log("No es pera")
     }
 }
