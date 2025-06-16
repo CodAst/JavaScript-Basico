@@ -73,16 +73,25 @@ document.getElementById("btnAddPalabra").addEventListener(
 function addPalabraLista(){
     // Obtener el input del HTML
     let input = document.getElementById("txtEntrada");
-    // Obtner el valor del input
+    // Obtener el valor del input sin espacios
     const texto = input.value.trim();
-    // Transformar a mayusculas
-    const textMayuscula = texto.toUpperCase();
-    // Agregar item a la lista
-    let lista = document.getElementById("lstPalabras");
-    // Creando un nuevo elemento HTML, li = list item
-    let nuevoItem = document.createElement("li");
-    // Agregando un contenido (texto) al item
-    nuevoItem.textContent = textMayuscula;
-    // Agregar item a la lista
-    lista.appendChild(nuevoItem);
+    // Verificar que el input no esté vacío
+    if (texto === "") {
+        alert("Por favor, escribe una palabra.");
+        return; // Salir de la función
+    }
+     // Transformar a mayusculas
+     const textMayuscula = texto.toUpperCase();
+     // Agregar item a la lista
+     let lista = document.getElementById("lstPalabras");
+     // Creando un nuevo elemento HTML, li = list item
+     let nuevoItem = document.createElement("li");
+     // Agregando un contenido (texto) al item
+     nuevoItem.textContent = textMayuscula;
+     // Agregar item a la lista
+     lista.appendChild(nuevoItem);
+    
+    input.value = "";
+    input.focus();
 }
+
