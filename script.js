@@ -32,7 +32,7 @@ function arreglos()
        console.log(f)
     }
 
-    //Condicionales
+    //Condicional
     if ((frutas[1]) === 'pera')
     {
         console.log("La segunda fruta es una pera");
@@ -40,5 +40,29 @@ function arreglos()
     else
     {
         console.log("No es pera")
+    }
+}
+
+
+document.getElementById("btnSaludar".addEventListener)
+{
+    "click", function() {
+        console.log("Hola!");
+    }
+}
+
+//Modificar el html atraves del DOM
+document.getElementById("btnAgregar").addEventListener
+{
+    "click", () =>
+    {
+        //Obtener el elemento de la "lista" (ul) del documento HTML
+        let lista = document.getElementById("lista");
+        //Creando un nuevo elemento HTML, li = list item
+        let nuevoItem = document.getElementById("li");
+        //Obteniendo el total de ítems de la lista
+        letTotalItems = lista.childElementCount;
+        //
+
     }
 }
