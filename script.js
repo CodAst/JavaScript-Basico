@@ -43,26 +43,25 @@ function arreglos()
     }
 }
 
-
-document.getElementById("btnSaludar".addEventListener)
-{
-    "click", function() {
+// Agregar evente a un elemento HTML
+document.getElementById("btnSaludar").addEventListener(
+    "click", function () {
         console.log("Hola!");
     }
-}
+);
 
-//Modificar el html atraves del DOM
-document.getElementById("btnAgregar").addEventListener
-{
-    "click", () =>
-    {
-        //Obtener el elemento de la "lista" (ul) del documento HTML
+// Modificar el HTML a través del DOM
+document.getElementById("btnAgregar").addEventListener(
+    "click", () => {
+        // Obtener el elemnto "lista" (ul) del documento HTML
         let lista = document.getElementById("lista");
-        //Creando un nuevo elemento HTML, li = list item
-        let nuevoItem = document.getElementById("li");
-        //Obteniendo el total de ítems de la lista
-        letTotalItems = lista.childElementCount;
-        //
-
+        // Creando un nuevo elemento HTML, li = list item
+        let nuevoItem = document.createElement("li");
+        // Obteniendo el total de ítems de la lista
+        let totalItems = lista.childElementCount;
+        // Agregando un contenido (texto) al item
+        nuevoItem.textContent = `Item ${totalItems + 1}`;
+        // Agregar item a la lista
+        lista.appendChild(nuevoItem);
     }
-}
+)
